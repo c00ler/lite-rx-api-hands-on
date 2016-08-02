@@ -4,6 +4,8 @@ import org.junit.Test;
 import reactor.core.publisher.Flux;
 import reactor.test.TestSubscriber;
 
+import java.util.Arrays;
+
 /**
  * Learn how to create Flux instances.
  *
@@ -26,7 +28,7 @@ public class Part01CreateFlux {
 
 	// TODO Return an empty Flux
 	Flux<String> emptyFlux() {
-		return null;
+		return Flux.empty();
 	}
 
 //========================================================================================
@@ -42,7 +44,7 @@ public class Part01CreateFlux {
 
 	// TODO Return a Flux that contains 2 values "foo" and "bar" without using an array or a collection
 	Flux<String> fooBarFluxFromValues() {
-		return null;
+		return Flux.just("foo", "bar");
 	}
 
 //========================================================================================
@@ -58,7 +60,7 @@ public class Part01CreateFlux {
 
 	// TODO Create a Flux from a List that contains 2 values "foo" and "bar"
 	Flux<String> fooBarFluxFromList() {
-		return null;
+		return Flux.fromIterable(Arrays.asList("foo", "bar"));
 	}
 
 //========================================================================================
@@ -74,7 +76,7 @@ public class Part01CreateFlux {
 
 	// TODO Create a Flux that emits an IllegalStateException
 	Flux<String> errorFlux() {
-		return null;
+		return Flux.error(new IllegalStateException());
 	}
 
 //========================================================================================
@@ -89,7 +91,7 @@ public class Part01CreateFlux {
 
 	// TODO Create a Flux that never terminates
 	Flux<String> neverTerminatedFlux() {
-		return null;
+		return Flux.never();
 	}
 
 //========================================================================================
@@ -105,7 +107,7 @@ public class Part01CreateFlux {
 
 	// TODO Create a Flux that emits an increasing value each 100ms
 	Flux<Long> counter() {
-		return null;
+		return Flux.intervalMillis(100L);
 	}
 
 }

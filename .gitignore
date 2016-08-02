@@ -1,10 +1,18 @@
-*.class
-*.war
-*.ear
-target/
+# IntelliJ IDEA project files #
+###############################
+.idea
+*.ipr
+*.iws
 *.iml
-.idea/
-.project
-.classpath
-.settings/
-.gradle/
+
+# Build artifacts #
+###################
+target
+
+# Mac OSX  #
+############
+.DS_Store
+
+*.tmp
+*.log
+*.csv
